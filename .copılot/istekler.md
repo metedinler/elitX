@@ -43,3 +43,10 @@ Bu dosya, konuşma boyunca kullanıcının yaptığı tüm istekleri buraya yazi
 - **Planlama**: `elitx_core_fb` alt klasorunde command/event tabanli cekirdek ve derleme scriptleri.
 - **Uygulama**: `elitx_core_fb/src` altinda canonical Type, dispatcher, event kaydi ve test girisi olusturuldu.
 - **Durum**: Yapildi
+
+## Istek 7: Eksikleri tamamla ve Faz C'ye gec
+- **Istek Tarihi**: 2026-03-28
+- **Aciklama**: Onceki islerde atlanan kisimlari tamamla, ardindan Faz C test ve dokumantasyonunu bitir.
+- **Planlama**: Sozlesme uyumsuz event adlarini duzelt, deterministik test akisina gec, API davranis raporu uret, belgeleri senkron tut.
+- **Uygulama**: `DIPLOMASI_DEGISTI` event uyumu saglandi; `src/main.bas` deterministik kontrol icerecek sekilde guncellendi; `api_davranis_raporu.md` eklendi; README/el kitabi/degisiklikler/plan append-only guncellendi.
+- **Durum**: Yapildi

@@ -292,7 +292,7 @@ Private Sub KomutDiplomasiTeklif(ByRef oyun As OyunDurumu, ByRef komut As KomutZ
     sonuc.basarili = 1
     sonuc.mesaj = "Diplomasi teklifi isleme alindi."
     sonuc.yeniSurum = oyun.surum
-    EventEkle sonuc, "DIPLOMASI_DURUMU_DEGISTI", "DIPLOMASI", oyun.oyuncu.oyuncuId, "etki=" & Trim(Str(etki))
+    EventEkle sonuc, "DIPLOMASI_DEGISTI", "DIPLOMASI", oyun.oyuncu.oyuncuId, "etki=" & Trim(Str(etki))
 End Sub
 
 Private Sub KomutSavunmaModu(ByRef oyun As OyunDurumu, ByRef komut As KomutZarfi, ByRef sonuc As KomutSonucu)

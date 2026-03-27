@@ -26,3 +26,17 @@
   - Yeni komutlar icin smoke test adimlari eklendi.
 - `plan.md`
   - Faz B genisletme adimlari append-only guncellendi.
+
+## 2026-03-28 (Faz C Tamamlama)
+- `src/core_engine.bi`
+  - Diplomasi event adi sozlesme uyumlu `DIPLOMASI_DEGISTI` olarak duzeltildi.
+- `src/main.bas`
+  - Smoke test akisi fonksiyonlastirildi.
+  - Sleep kaldirildi ve terminal otomasyonuna uygun cikis saglandi.
+  - Determinizm kontrolu icin ayni senaryo iki kez kosulup durum imzasi karsilastirmasi eklendi.
+- `README.md`
+  - Komut kapsami, calistirma ve dogrulama bolumleri guncellendi.
+- `api_davranis_raporu.md`
+  - Faz C API davranis raporu eklendi.
+- `plan.md`
+  - Faz C kapanis maddeleri append-only eklendi.

@@ -76,3 +76,9 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 - [Tamamlandi] `elitx_core_fb/src/main.bas` smoke testi yeni komut akislari ile guncellendi.
 - [Tamamlandi] Faz B genisletme kaydi `elitx_core_fb/plan.md` ve `elitx_core_fb/degisiklikler.md` dosyalarina append-only yazildi.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / tur-6
+- [Tamamlandi] Onceki eksik kapatildi: diplomasi event adi sozlesme ile uyumlu `DIPLOMASI_DEGISTI` olarak duzeltildi.
+- [Tamamlandi] Faz C.1/Faz C.2: smoke senaryo deterministik kontrolle calistirilabilir hale getirildi ve derleme dogrulandi.
+- [Tamamlandi] Faz C.3: `elitx_core_fb/api_davranis_raporu.md` olusturuldu.
+- [Tamamlandi] Kod degisikligi ile birlikte README + programci el kitabi + istek kaydi + degisiklik kaydi ayni turda guncellendi.
+
