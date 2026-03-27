@@ -36,3 +36,10 @@ Bu dosya, konuşma boyunca kullanıcının yaptığı tüm istekleri buraya yazi
 - **Planlama**: 3 dosya grubu uretilmesi: API sozlesmesi, veri semasi, katman-bazli karar sistem belgesi.
 - **Uygulama**: `.copılot/cekirdek_api_sozlesmesi_v1.md`, `.copılot/kitap1cvc_normalizasyonu.txt`, `.copılot/kitap1cvc_normalizasyonu_schema.json`, `.copılot/karar_verici_sistemler.md` olusturuldu.
 - **Durum**: Yapildi
+
+## Istek 6: FreeBASIC OOP cekirdege gecis
+- **Istek Tarihi**: 2026-03-28
+- **Aciklama**: Cekirdek API sozlesmesi ve planlara uyan yeni alt klasorde FreeBASIC OOP cekirdek baslat.
+- **Planlama**: `elitx_core_fb` alt klasorunde command/event tabanli cekirdek ve derleme scriptleri.
+- **Uygulama**: `elitx_core_fb/src` altinda canonical Type, dispatcher, event kaydi ve test girisi olusturuldu.
+- **Durum**: Yapildi

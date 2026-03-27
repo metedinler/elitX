@@ -37,3 +37,9 @@
   - Entity bazli normalize sema JSON olarak eklendi.
 - `.copılot/karar_verici_sistemler.md`
   - Ekonomi, diplomasi, gorev, NPC ve olay katmanlari icin en uygun karar verici sistem secimleri yazildi.
+
+## 2026-03-28 (tur-4)
+- `elitx_core_fb/`
+  - Yeni alt calisma klasoru acildi.
+  - Cekirdek API sozlesmesine uyan FreeBASIC referans cekirdek baslatildi.
+  - Komut zarfi -> sonuc + event listesi akisi canli kod olarak yazildi.

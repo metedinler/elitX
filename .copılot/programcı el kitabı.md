@@ -9,6 +9,10 @@ elitxf, FreeBASIC ile yazilmis TYPE-merkezli bir oyun cekirdegidir. ROOT nesne `
 - `elitxf/src/economy.bi`: pazar guncellemesi, ticaret, yakit, gorev, yolcu akisi.
 - `elitxf/src/flight.bi`: wireframe modeller, sahne nesneleri, perspektif cizim.
 - `elitxf/src/ui.bi`: panel cizimi, yardim overlay, input dispatch.
+- `elitx_core_fb/src/main.bas`: dil-bagimsiz cekirdek API referans giris noktasi.
+- `elitx_core_fb/src/core_types.bi`: KomutZarfi, EventZarfi, KomutSonucu, OyunDurumu canonical tanimlari.
+- `elitx_core_fb/src/core_engine.bi`: komut dispatcher ve event kayit mantigi.
+- `elitx_core_fb/src/core_commands.bi`: metin->komut turu cevirimi.
 
 ## Moduller
 
@@ -75,3 +79,9 @@ elitxf, FreeBASIC ile yazilmis TYPE-merkezli bir oyun cekirdegidir. ROOT nesne `
 - Derleme: `elitxf/build.ps1`
 - Calistirma: `elitxf/run.ps1`
 - Acik kalan surec kontrolu: `Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'elitxf.exe' }`
+
+## Cekirdek API Referans Modulu (elitx_core_fb)
+- Hedef: `.copılot/cekirdek_api_sozlesmesi_v1.md` uyumlu command/event cekirdek.
+- Giris: `KomutIsle(ByRef oyun, ByRef komut, ByRef sonuc)`
+- Cikis: `KomutSonucu` + event listesi.
+- Determinizm: `CekirdekBaslat` icinde tohum tabanli `Randomize`.

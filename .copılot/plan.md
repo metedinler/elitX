@@ -65,3 +65,9 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 - [Tamamlandi] Cikti-2: Kitap1cvc normalizasyonu .txt ve .json sema dosyalari olusturuldu.
 - [Tamamlandi] Cikti-3: Ekonomi/diplomasi/ticaret/gelisim katmanlari icin karar verici sistem secim belgesi hazirlandi.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / tur-4
+- [Tamamlandi] Yeni alt calisma klasoru `elitx_core_fb` acildi.
+- [Tamamlandi] Cekirdek API sozlesmesine uygun FreeBASIC OOP cekirdek iskeleti yazildi.
+- [Tamamlandi] Komut dispatcher, event kayitlayici ve V1 komutlari eklendi.
+- [Tamamlandi] Ayrik build/run scriptleri eklendi ve derleme dogrulandi.
+
