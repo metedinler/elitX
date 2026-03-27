@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": {
+    "workbook": "STARTREK_UNIVERSE/Kitap1cvc.xlsx",
+    "sheets": [
+      "dii_bolum_koordinat",
+      "irklar_ve_puanlar",
+      "bolge_fenom_var_koor",
+      "irk_koordinat",
+      "ozel_varlik_guc"
+    ]
+  },
+  "entities": {
+    "irklar": {
+      "primaryKey": "irk_id",
+      "fields": {
+        "irk_id": "string",
+        "ad": "string",
+        "teknoloji": "int[0,255]",
+        "savascilik": "int[0,255]",
+        "diplomasi": "int[0,255]",
+        "ticaret_egilimi": "int[0,255]",
+        "etik": "int[0,255]",
+        "ego": "int[0,255]",
+        "adaptasyon": "int[0,255]",
+        "risk_profili": "int[0,255]",
+        "baslangic_sistem_id": "string"
+      },
+      "required": [
+        "irk_id",
+        "ad",
+        "teknoloji",
+        "savascilik",
+        "diplomasi",
+        "ticaret_egilimi"
+      ]
+    },
+    "irk_merkezleri": {
+      "primaryKey": "kayit_id",
+      "fields": {
+        "kayit_id": "string",
+        "irk_id": "string",
+        "sistem_id": "string",
+        "x": "double",
+        "y": "double",
+        "z": "double",
+        "etki_yaricapi": "double"
+      },
+      "required": ["kayit_id", "irk_id", "sistem_id", "x", "y", "z"]
+    },
+    "bolumler": {
+      "primaryKey": "bolum_id",
+      "fields": {
+        "bolum_id": "string",
+        "sezon": "int",
+        "bolum_no": "int",
+        "baslik": "string",
+        "x": "double",
+        "y": "double",
+        "z": "double",
+        "zaman_etiketi": "string",
+        "bagli_irk_id": "string[]"
+      },
+      "required": ["bolum_id", "baslik"]
+    },
+    "anomaliler": {
+      "primaryKey": "anomali_id",
+      "fields": {
+        "anomali_id": "string",
+        "tur": "string",
+        "ad": "string",
+        "x": "double",
+        "y": "double",
+        "z": "double",
+        "siddet": "double",
+        "stabilite": "double",
+        "risk_skoru": "double"
+      },
+      "required": ["anomali_id", "tur", "ad", "x", "y", "z"]
+    },
+    "ozel_varliklar": {
+      "primaryKey": "varlik_id",
+      "fields": {
+        "varlik_id": "string",
+        "ad": "string",
+        "tur": "string",
+        "guc": "double",
+        "etki_turu": "string",
+        "iliski_kurali": "string"
+      },
+      "required": ["varlik_id", "ad", "tur"]
+    }
+  },
+  "runtime": {
+    "defaultSeed": 1337,
+    "deterministic": true,
+    "timeStepMs": 1000
+  },
+  "exports": {
+    "format": "json",
+    "paths": [
+      "data/canonical/irklar.json",
+      "data/canonical/irk_merkezleri.json",
+      "data/canonical/bolumler.json",
+      "data/canonical/anomaliler.json",
+      "data/canonical/ozel_varliklar.json",
+      "data/canonical/meta.json"
+    ]
+  }
+}

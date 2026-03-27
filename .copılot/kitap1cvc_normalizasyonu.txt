@@ -1,0 +1,94 @@
+KITAP1CVC.XLSX NORMALIZASYON REHBERI (v1)
+
+Kaynak dosya:
+- STARTREK_UNIVERSE/Kitap1cvc.xlsx
+
+Hedef:
+- Cekirdegin dil bagimsiz kullanimi icin canonical veri seti uretmek.
+
+Beklenen calisma sayfalari (dokuman tabanli):
+1) dii_bolum_koordinat
+2) irklar_ve_puanlar
+3) bolge_fenom_var_koor
+4) irk_koordinat
+5) ozel_varlik_guc
+
+GENEL KURALLAR
+- Tum ID alanlari string veya int ama tek tipte normalize edilir.
+- Koordinatlar sayisal tipe cevrilir (double).
+- Bos hucreler null olur, 0 ile doldurulmaz.
+- Metinlerde trim + unicode normalize uygulanir.
+- Her kayit icin kaynak_satir_no saklanir.
+
+TABLO NORMALIZASYONU
+
+A) irklar_ve_puanlar -> irklar.json
+- irk_id
+- ad
+- teknoloji (0-255)
+- savascilik (0-255)
+- diplomasi (0-255)
+- ticaret_egilimi (0-255)
+- etik (0-255)
+- ego (0-255)
+- adaptasyon (0-255)
+- risk_profili (0-255)
+- baslangic_sistem_id
+
+B) irk_koordinat -> irk_merkezleri.json
+- irk_id
+- sistem_id
+- x
+- y
+- z
+- etki_yaricapi
+
+C) dii_bolum_koordinat -> bolumler.json
+- bolum_id
+- sezon
+- bolum_no
+- baslik
+- x
+- y
+- z
+- zaman_etiketi
+- bagli_irk_id[]
+
+D) bolge_fenom_var_koor -> anomaliler.json
+- anomali_id
+- tur
+- ad
+- x
+- y
+- z
+- siddet
+- stabilite
+- risk_skoru
+
+E) ozel_varlik_guc -> ozel_varliklar.json
+- varlik_id
+- ad
+- tur
+- guc
+- etki_turu
+- iliski_kurali
+
+URETIM CIKTILARI
+- data/canonical/irklar.json
+- data/canonical/irk_merkezleri.json
+- data/canonical/bolumler.json
+- data/canonical/anomaliler.json
+- data/canonical/ozel_varliklar.json
+- data/canonical/meta.json
+
+META ICERIGI
+- kaynak_dosya
+- olusturma_zamani
+- satir_sayilari
+- alan_hata_raporu
+- surum
+
+VALIDASYON
+- Zorunlu alan bos ise kayit RED
+- Koordinat parse edilemiyorsa kayit WARN ve ayri rapora dus
+- 0-255 araligindaki skorlar clamp edilmez, RED edilir

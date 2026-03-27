@@ -29,3 +29,10 @@ Bu dosya, konuşma boyunca kullanıcının yaptığı tüm istekleri buraya yazi
 - **Planlama**: Once .copilot belgeleri, sonra oyun kontrol/yardim adimlari.
 - **Uygulama**: Kurallar/plan/istekler/el kitabi dolduruldu; yardim ekrani ve baglamsal tuslar kodlandi.
 - **Durum**: Kismi
+
+## Istek 5: Cekirdek API + Kitap1cvc semasi + karar sistem secimi
+- **Istek Tarihi**: 2026-03-27
+- **Aciklama**: Dil bagimsiz cekirdek API sozlesmesi hazirla, Kitap1cvc verisini .txt/.json normalize semaya al, karar verici en iyi sistemleri sec.
+- **Planlama**: 3 dosya grubu uretilmesi: API sozlesmesi, veri semasi, katman-bazli karar sistem belgesi.
+- **Uygulama**: `.copılot/cekirdek_api_sozlesmesi_v1.md`, `.copılot/kitap1cvc_normalizasyonu.txt`, `.copılot/kitap1cvc_normalizasyonu_schema.json`, `.copılot/karar_verici_sistemler.md` olusturuldu.
+- **Durum**: Yapildi

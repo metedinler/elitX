@@ -27,3 +27,13 @@
   - c:/Users/mete/Zotero/elıteX altinda yerel repo olusturuldu.
   - İlk yayin paketi elitxf + gerekli .copilot belgeleri olarak commit edildi.
   - `origin` uzak deposu `https://github.com/metedinler/elitX.git` olarak ayarlanip push edildi.
+
+## 2026-03-27 (tur-3)
+- `.copılot/cekirdek_api_sozlesmesi_v1.md`
+  - Dil bagimsiz komut/event temelli cekirdek API sozlesmesi eklendi.
+- `.copılot/kitap1cvc_normalizasyonu.txt`
+  - Kitap1cvc icin canonical veri normalizasyon kurallari yazildi.
+- `.copılot/kitap1cvc_normalizasyonu_schema.json`
+  - Entity bazli normalize sema JSON olarak eklendi.
+- `.copılot/karar_verici_sistemler.md`
+  - Ekonomi, diplomasi, gorev, NPC ve olay katmanlari icin en uygun karar verici sistem secimleri yazildi.

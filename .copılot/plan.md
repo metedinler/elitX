@@ -60,3 +60,8 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 ## Ek Plan Guncellemesi (Append-Only) - 2026-03-27 / tur-2
 - [Tamamlandi] Faz 4: Yerel depo olusturuldu, origin elitX ayarlandi ve ilk push basariyla yapildi.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-27 / tur-3
+- [Tamamlandi] Cikti-1: Dil bagimsiz cekirdek API sozlesmesi .copilot altinda olusturuldu.
+- [Tamamlandi] Cikti-2: Kitap1cvc normalizasyonu .txt ve .json sema dosyalari olusturuldu.
+- [Tamamlandi] Cikti-3: Ekonomi/diplomasi/ticaret/gelisim katmanlari icin karar verici sistem secim belgesi hazirlandi.
+
