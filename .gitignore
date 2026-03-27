@@ -1,0 +1,14 @@
+# Build outputs
+elitxf/build/
+elitxf/dist/
+elitxf/backup/
+
+# Temporary staging
+C:/elitxf_stage/
+
+# VS Code
+.vscode/
+
+# OS junk
+Thumbs.db
+Desktop.ini
