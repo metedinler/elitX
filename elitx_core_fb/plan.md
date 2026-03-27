@@ -19,3 +19,8 @@ Bu alt calisma alani, `.copılot/cekirdek_api_sozlesmesi_v1.md` ile uyumlu FreeB
 1. Konsol test senaryosu
 2. Derleme dogrulamasi
 3. API davranis raporu
+
+### Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / faz-b-genisletme
+- [Tamamlandi] V1 komut kapsamı genisletildi: OYUN_KAYDET, OYUN_YUKLE, YAKIT_AL, HIPER_YAKIT_AL, GOREV_KABUL, GOREV_IPTAL, DIPLOMASI_TEKLIF, SAVUNMA_MODU, SALDIRI_BASLAT.
+- [Tamamlandi] Dosya tabanli kaydet/yukle yolu `build\\savegame.dat` varsayilani ile eklendi.
+- [Tamamlandi] `main.bas` smoke test senaryosu yeni komutlari kapsayacak sekilde guncellendi.

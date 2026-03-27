@@ -27,6 +27,7 @@ Type OyuncuDurumu
     oyuncuId As String * 24
     kredi As Double
     yakit As Double
+    hiperYakit As Double
     bulunduguSistemId As Integer
 End Type
 
@@ -35,6 +36,9 @@ Type OyunDurumu
     tohum As Integer
     turNo As Long
     oyuncu As OyuncuDurumu
+    aktifGorev As String * 64
+    diplomasiPuani As Integer
+    savunmaModu As Integer
 End Type
 
 Type KomutZarfi

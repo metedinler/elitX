@@ -14,3 +14,15 @@
   - ASCII stage ile derleme eklendi.
 - `run.ps1`
   - Derlenen cekirdek exe calistirma scripti eklendi.
+
+## 2026-03-28 (Faz B Genisletme)
+- `src/core_types.bi`
+  - Oyuncu ve oyun durumuna `hiperYakit`, `aktifGorev`, `diplomasiPuani`, `savunmaModu` alanlari eklendi.
+- `src/core_engine.bi`
+  - Yeni komutlar eklendi: OYUN_KAYDET, OYUN_YUKLE, YAKIT_AL, HIPER_YAKIT_AL, GOREV_KABUL, GOREV_IPTAL, DIPLOMASI_TEKLIF, SAVUNMA_MODU, SALDIRI_BASLAT.
+  - Kaydet/yukle icin dosya tabanli `key=value` formatinda serilestirme akisi eklendi.
+  - Sistem gecisinde yakit kontrolu eklendi.
+- `src/main.bas`
+  - Yeni komutlar icin smoke test adimlari eklendi.
+- `plan.md`
+  - Faz B genisletme adimlari append-only guncellendi.

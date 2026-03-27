@@ -71,3 +71,8 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 - [Tamamlandi] Komut dispatcher, event kayitlayici ve V1 komutlari eklendi.
 - [Tamamlandi] Ayrik build/run scriptleri eklendi ve derleme dogrulandi.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / tur-5
+- [Tamamlandi] Faz B kapsam genisletildi: kaydet/yukle, yakit/hiper yakit, gorev, diplomasi ve savunma/saldiri komutlari cekirdege eklendi.
+- [Tamamlandi] `elitx_core_fb/src/main.bas` smoke testi yeni komut akislari ile guncellendi.
+- [Tamamlandi] Faz B genisletme kaydi `elitx_core_fb/plan.md` ve `elitx_core_fb/degisiklikler.md` dosyalarina append-only yazildi.
+
