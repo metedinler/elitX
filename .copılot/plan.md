@@ -57,3 +57,6 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 - [Tamamlandi] Faz 3.1-3.2: README ve degisiklik kaydi guncelleniyor.
 - [Kismi] Faz 4: Yerel push adimi bu turda kimlik dogrulama ortamina bagli.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-27 / tur-2
+- [Tamamlandi] Faz 4: Yerel depo olusturuldu, origin elitX ayarlandi ve ilk push basariyla yapildi.
+

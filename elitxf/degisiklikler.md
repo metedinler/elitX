@@ -23,3 +23,7 @@
   - elitxf modulleri, API giris/cikis ve akis detaylariyla dolduruldu.
 - `README.md`
   - Yardim ve baglamsal ok tusu davranislari dokumante edildi.
+- `git`
+  - c:/Users/mete/Zotero/elıteX altinda yerel repo olusturuldu.
+  - İlk yayin paketi elitxf + gerekli .copilot belgeleri olarak commit edildi.
+  - `origin` uzak deposu `https://github.com/metedinler/elitX.git` olarak ayarlanip push edildi.
