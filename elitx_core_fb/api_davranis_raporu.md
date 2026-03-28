@@ -52,7 +52,14 @@ Her komut su alanlari dondurur:
 - Event: GOREV_DURUMU_DEGISTI
 
 8. DIPLOMASI_TEKLIF
-- Etki: diplomasiPuani artar/azalir.
+- Etki: `veri` icindeki semantik parametrelere gore degisir.
+	- `gonderen=<id>`
+	- `hedef=<id>`
+	- `karar=TEKLIF|ONAY|RET`
+	- `etki=<pozitif tamsayi>`
+	- TEKLIF: diplomasiPuani + etki
+	- ONAY: diplomasiPuani + (etki + 1)
+	- RET: diplomasiPuani - etki
 - Event: DIPLOMASI_DEGISTI
 
 9. SAVUNMA_MODU
@@ -80,3 +87,4 @@ Beklenen cikti: Deterministik Kontrol: BASARILI
 ## Notlar
 - DOSYA_KAYDEDILDI ve DOSYA_YUKLENDI event tipleri, v1 listesine ek observability eventleri olarak kullanilmistir.
 - v1 event sozlesmesindeki isimlendirme ile uyum icin diplomasi eventi DIPLOMASI_DEGISTI olarak uretilmektedir.
+- Dis istemci entegrasyonu icin JSON/TXT parse-serilestirme katmani (`src/core_io.bi`) ve bridge girisi (`src/bridge_main.bas`) eklenmistir.

@@ -50,3 +50,10 @@ Bu dosya, konuşma boyunca kullanıcının yaptığı tüm istekleri buraya yazi
 - **Planlama**: Sozlesme uyumsuz event adlarini duzelt, deterministik test akisina gec, API davranis raporu uret, belgeleri senkron tut.
 - **Uygulama**: `DIPLOMASI_DEGISTI` event uyumu saglandi; `src/main.bas` deterministik kontrol icerecek sekilde guncellendi; `api_davranis_raporu.md` eklendi; README/el kitabi/degisiklikler/plan append-only guncellendi.
 - **Durum**: Yapildi
+
+## Istek 8: Belgeleri genislet + JSON/TXT IO katmani + oyun odakli tam plan
+- **Istek Tarihi**: 2026-03-28
+- **Aciklama**: Yapilanlari kapsamli belgele, dis istemci icin JSON/TXT komut zarfi giris/cikis katmani ekle, diplomasi anlami ve cekirdek veri akisi icin tam oyun plani cikar.
+- **Planlama**: `docs/` altinda 3 belge, `core_io` adapter, `bridge_main` dis istemci girisi, diplomasi semantik netlestirme, tum plan/degisiklik/el kitabi senkronu.
+- **Uygulama**: `src/core_io.bi`, `src/bridge_main.bas`, `run_bridge.ps1` ve build guncellemesi yapildi; diplomasi komutuna `gonderen/hedef/karar/etki` semantigi eklendi; `docs/cekirdek_ne_yapiyor.md`, `docs/dis_istemci_json_txt.md`, `docs/oyun_cekirdegi_tam_plan.md` olusturuldu.
+- **Durum**: Yapildi

@@ -13,6 +13,8 @@ elitxf, FreeBASIC ile yazilmis TYPE-merkezli bir oyun cekirdegidir. ROOT nesne `
 - `elitx_core_fb/src/core_types.bi`: KomutZarfi, EventZarfi, KomutSonucu, OyunDurumu canonical tanimlari.
 - `elitx_core_fb/src/core_engine.bi`: komut dispatcher ve event kayit mantigi.
 - `elitx_core_fb/src/core_commands.bi`: metin->komut turu cevirimi.
+- `elitx_core_fb/src/core_io.bi`: JSON/TXT komut zarfi parse-serilestirme katmani.
+- `elitx_core_fb/src/bridge_main.bas`: dis istemci dosya tabanli bridge girisi.
 
 ## Moduller
 
@@ -110,6 +112,27 @@ elitxf, FreeBASIC ile yazilmis TYPE-merkezli bir oyun cekirdegidir. ROOT nesne `
 	- Diplomasi/Savas: `KOMUT_DIPLOMASI_TEKLIF`, `KOMUT_SAVUNMA_MODU`, `KOMUT_SALDIRI_BASLAT`
 - Event isimlendirmesi sozlesme uyumlu olacak sekilde uretilir:
 	- `EKONOMI_GUNCELLENDI`, `FIYAT_DEGISTI`, `DIPLOMASI_DEGISTI`, `GOREV_DURUMU_DEGISTI`, `SAVAS_DURUMU_DEGISTI`, `OLAY_TETIKLENDI`, `OYUNCU_DURUMU_DEGISTI`
+- Diplomasi komutu semantigi:
+	- `KOMUT_DIPLOMASI_TEKLIF` icin `veri` parametresi `gonderen`, `hedef`, `karar`, `etki` alanlari tasir.
+	- `karar` degeri `TEKLIF|ONAY|RET` olabilir.
+	- Event kaynagi/hedefi gonderen-hedef ile doldurulur.
+
+### core_io.bi (elitx_core_fb)
+- `KomutZarfiJsonOku` / `KomutZarfiTxtOku`:
+	- dis istemci girdisini `KomutZarfi` tipine mapler.
+- `KomutSonucuJsonYaz` / `KomutSonucuTxtYaz`:
+	- `KomutSonucu` + event listesini dis formata serilestirir.
+- `KomutCalistirMetinGirdi`:
+	- parse -> `KomutIsle` -> serialize akisini tek fonksiyonda toplar.
+
+### bridge_main.bas (elitx_core_fb)
+- Giris parametreleri:
+	- `<giris_bicimi> <giris_dosyasi> <cikis_bicimi> <cikis_dosyasi> [durum_dosyasi]`
+- Akis:
+	- cekirdek baslatilir, durum dosyasindan auto-yukleme yapilir.
+	- giris zarfi okunur ve islenir.
+	- cikis sonucu dosyaya yazilir.
+	- durum auto-kaydedilir.
 
 ### main.bas (elitx_core_fb)
 - Smoke test senaryosu tum v1 komutlarini sirayla calistirir.

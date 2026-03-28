@@ -26,6 +26,35 @@ Private Sub EventEkle(ByRef sonuc As KomutSonucu, ByVal tur As String, ByVal kay
     sonuc.eventler(sonuc.eventSayisi).yuk = Left(yuk, AZAMI_KOMUT_VERI)
 End Sub
 
+Private Function AlanDegeri(ByVal ham As String, ByVal anahtar As String, ByVal varsayilan As String) As String
+    Dim metin As String
+    Dim aranan As String
+    Dim p As Integer
+    Dim basla As Integer
+    Dim bitis As Integer
+    Dim c As String
+
+    metin = Trim(ham)
+    If Len(metin) = 0 Then Return varsayilan
+
+    aranan = LCase(Trim(anahtar)) & "="
+    p = InStr(LCase(metin), aranan)
+    If p <= 0 Then Return varsayilan
+
+    basla = p + Len(aranan)
+    bitis = Len(metin) + 1
+
+    For p = basla To Len(metin)
+        c = Mid(metin, p, 1)
+        If c = ";" Or c = "," Then
+            bitis = p
+            Exit For
+        End If
+    Next p
+
+    Return Trim(Mid(metin, basla, bitis - basla))
+End Function
+
 Sub CekirdekBaslat(ByRef oyun As OyunDurumu, ByVal tohum As Integer)
     oyun.surum = 1
     oyun.tohum = tohum
@@ -283,16 +312,39 @@ Private Sub KomutGorevIptal(ByRef oyun As OyunDurumu, ByRef sonuc As KomutSonucu
 End Sub
 
 Private Sub KomutDiplomasiTeklif(ByRef oyun As OyunDurumu, ByRef komut As KomutZarfi, ByRef sonuc As KomutSonucu)
+    Dim gonderen As String
+    Dim hedef As String
+    Dim karar As String
     Dim etki As Integer
-    etki = Val(Trim(komut.veri))
+
+    gonderen = AlanDegeri(komut.veri, "gonderen", Trim(oyun.oyuncu.oyuncuId))
+    hedef = AlanDegeri(komut.veri, "hedef", "FAKSIYON-NOTR")
+    karar = UCase(AlanDegeri(komut.veri, "karar", "TEKLIF"))
+    etki = Val(AlanDegeri(komut.veri, "etki", "1"))
+    If etki < 0 Then etki = -etki
     If etki = 0 Then etki = 1
 
-    oyun.diplomasiPuani += etki
+    Select Case karar
+        Case "TEKLIF"
+            oyun.diplomasiPuani += etki
+            sonuc.mesaj = "Diplomasi teklifi gonderildi."
+        Case "ONAY", "KABUL"
+            oyun.diplomasiPuani += etki + 1
+            sonuc.mesaj = "Diplomasi teklifi onaylandi."
+        Case "RET", "RED"
+            oyun.diplomasiPuani -= etki
+            sonuc.mesaj = "Diplomasi teklifi reddedildi."
+        Case Else
+            sonuc.basarili = 0
+            sonuc.hataKodu = "GECERSIZ_DIPLOMASI_KARARI"
+            sonuc.mesaj = "Diplomasi karari TEKLIF/ONAY/RET olmali."
+            Exit Sub
+    End Select
+
     oyun.surum += 1
     sonuc.basarili = 1
-    sonuc.mesaj = "Diplomasi teklifi isleme alindi."
     sonuc.yeniSurum = oyun.surum
-    EventEkle sonuc, "DIPLOMASI_DEGISTI", "DIPLOMASI", oyun.oyuncu.oyuncuId, "etki=" & Trim(Str(etki))
+    EventEkle sonuc, "DIPLOMASI_DEGISTI", gonderen, hedef, "karar=" & karar & ";etki=" & Trim(Str(etki))
 End Sub
 
 Private Sub KomutSavunmaModu(ByRef oyun As OyunDurumu, ByRef komut As KomutZarfi, ByRef sonuc As KomutSonucu)

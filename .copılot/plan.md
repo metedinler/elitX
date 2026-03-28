@@ -82,3 +82,10 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 - [Tamamlandi] Faz C.3: `elitx_core_fb/api_davranis_raporu.md` olusturuldu.
 - [Tamamlandi] Kod degisikligi ile birlikte README + programci el kitabi + istek kaydi + degisiklik kaydi ayni turda guncellendi.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / tur-7
+- [Tamamlandi] Dis istemci entegrasyonu icin JSON/TXT komut zarfi parse-serilestirme katmani eklendi (`elitx_core_fb/src/core_io.bi`).
+- [Tamamlandi] Dosya tabanli bridge girisi eklendi (`elitx_core_fb/src/bridge_main.bas`, `elitx_core_fb/run_bridge.ps1`).
+- [Tamamlandi] Build hatti bridge exe derleyecek sekilde guncellendi.
+- [Tamamlandi] Diplomasi komutunda kim-kime/karar anlami netlestirildi (`gonderen`, `hedef`, `karar`, `etki`).
+- [Tamamlandi] Cekirdek ozeti, dis istemci kilavuzu ve oyun odakli tam plan belgeleri `elitx_core_fb/docs` altinda eklendi.
+

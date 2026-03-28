@@ -40,3 +40,23 @@
   - Faz C API davranis raporu eklendi.
 - `plan.md`
   - Faz C kapanis maddeleri append-only eklendi.
+
+## 2026-03-28 (Faz D: IO ve Semantik Netlestirme)
+- `src/core_io.bi`
+  - JSON/TXT komut zarfi okuma ve sonuc/event serilestirme eklendi.
+  - `KomutCalistirMetinGirdi` ile parse -> KomutIsle -> serialize akisi eklendi.
+- `src/bridge_main.bas`
+  - Dosyadan komut alip dosyaya sonuc yazan dis istemci bridge girisi eklendi.
+  - Varsayilan durum dosyasi ile auto load/save akisi eklendi.
+- `build.ps1`
+  - `elitx_core_bridge.exe` derlemesi eklendi.
+- `run_bridge.ps1`
+  - Bridge exe icin calistirma scripti eklendi.
+- `src/core_engine.bi`
+  - Diplomasi komutu `gonderen/hedef/karar/etki` parametreleri ile kim-kime ve onay/red semantigini isleyecek sekilde guncellendi.
+- `docs/cekirdek_ne_yapiyor.md`
+  - Cekirdegin gorev ve akis ozeti eklendi.
+- `docs/dis_istemci_json_txt.md`
+  - JSON/TXT dis istemci kullanim kilavuzu eklendi.
+- `docs/oyun_cekirdegi_tam_plan.md`
+  - Diplomasi ve veri alma modeli dahil oyun odakli tam yol haritasi eklendi.

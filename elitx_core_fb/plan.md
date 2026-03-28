@@ -30,3 +30,10 @@ Bu alt calisma alani, `.copılot/cekirdek_api_sozlesmesi_v1.md` ile uyumlu FreeB
 - [Tamamlandi] Faz C.2: Derleme dogrulamasi `build.ps1` ile basarili.
 - [Tamamlandi] Faz C.3: API davranis raporu `api_davranis_raporu.md` olarak eklendi.
 - [Tamamlandi] Determinizm kontrolu icin ayni senaryo iki kez kosulup durum imzasi karsilastirma akisi eklendi.
+
+### Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / faz-d-io-ve-semantik
+- [Tamamlandi] JSON/TXT komut zarfi parse-serilestirme katmani `src/core_io.bi` eklendi.
+- [Tamamlandi] Dosya tabanli dis istemci bridge girisi `src/bridge_main.bas` ve `run_bridge.ps1` eklendi.
+- [Tamamlandi] Build hatti bridge exe uretecek sekilde guncellendi.
+- [Tamamlandi] Diplomasi komutu `gonderen/hedef/karar/etki` semantigi ile netlestirildi.
+- [Tamamlandi] Cekirdek ozeti, dis istemci kilavuzu ve oyun odakli tam plan dokumanlari `docs/` altina eklendi.
