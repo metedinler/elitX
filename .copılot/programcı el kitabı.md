@@ -15,6 +15,10 @@ elitxf, FreeBASIC ile yazilmis TYPE-merkezli bir oyun cekirdegidir. ROOT nesne `
 - `elitx_core_fb/src/core_commands.bi`: metin->komut turu cevirimi.
 - `elitx_core_fb/src/core_io.bi`: JSON/TXT komut zarfi parse-serilestirme katmani.
 - `elitx_core_fb/src/bridge_main.bas`: dis istemci dosya tabanli bridge girisi.
+- `elitexf/src/main.bas`: cekirdek merkezli yeni oyun kabugu ana dongusu.
+- `elitexf/src/oyun_turleri.bi`: kabuk durum tipi.
+- `elitexf/src/cekirdek_istemci.bi`: cekirdege komut gonderen adapter.
+- `elitexf/src/arayuz.bi`: konsol menu ve durum/event gosterimi.
 
 ## Moduller
 
@@ -133,6 +137,21 @@ elitxf, FreeBASIC ile yazilmis TYPE-merkezli bir oyun cekirdegidir. ROOT nesne `
 	- giris zarfi okunur ve islenir.
 	- cikis sonucu dosyaya yazilir.
 	- durum auto-kaydedilir.
+
+### elitexf oyun kabugu
+- `OyunKabukDurumu`:
+	- `oyun: OyunDurumu`
+	- `sonKomutNo: Long`
+	- `sonSonuc: KomutSonucu`
+	- `calisiyor: Integer`
+- `ElitexfBaslat`:
+	- cekirdegi tohumla baslatir ve acilis komutunu gonderir.
+- `CekirdekKomutGonder`:
+	- menu aksiyonlarini komut zarfi formatina cevirip `KomutIsle` cagirir.
+- `KomutSecimiIsle`:
+	- kullanici secimini alip ilgili cekirdek komutuna mapler.
+- `DurumOzetiYaz`:
+	- kabuk ekraninda oyuncu ve oyun durumunu okunur formatta gosterir.
 
 ### main.bas (elitx_core_fb)
 - Smoke test senaryosu tum v1 komutlarini sirayla calistirir.

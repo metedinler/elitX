@@ -57,3 +57,10 @@ Bu dosya, konuşma boyunca kullanıcının yaptığı tüm istekleri buraya yazi
 - **Planlama**: `docs/` altinda 3 belge, `core_io` adapter, `bridge_main` dis istemci girisi, diplomasi semantik netlestirme, tum plan/degisiklik/el kitabi senkronu.
 - **Uygulama**: `src/core_io.bi`, `src/bridge_main.bas`, `run_bridge.ps1` ve build guncellemesi yapildi; diplomasi komutuna `gonderen/hedef/karar/etki` semantigi eklendi; `docs/cekirdek_ne_yapiyor.md`, `docs/dis_istemci_json_txt.md`, `docs/oyun_cekirdegi_tam_plan.md` olusturuldu.
 - **Durum**: Yapildi
+
+## Istek 9: Cekirdek etrafinda Elitexf oyununu yeniden tasarla
+- **Istek Tarihi**: 2026-03-28
+- **Aciklama**: Cekirdegi temel alarak yeni oyun kabugu ile Elitexf tasarimini baslat.
+- **Planlama**: Ayrik `elitexf` alt klasoru, cekirdek adapter + menulu oyun dongusu + derleme/calistirma scriptleri.
+- **Uygulama**: `elitexf/src` altinda moduler kabuk kuruldu (`oyun_turleri`, `cekirdek_istemci`, `arayuz`, `main`); build/run scriptleri eklendi ve derleme dogrulandi.
+- **Durum**: Yapildi

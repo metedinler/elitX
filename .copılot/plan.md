@@ -89,3 +89,9 @@ Bu plan, bos GitHub deposu ile yerel calisma alanini esitleyip elitxf oyununda k
 - [Tamamlandi] Diplomasi komutunda kim-kime/karar anlami netlestirildi (`gonderen`, `hedef`, `karar`, `etki`).
 - [Tamamlandi] Cekirdek ozeti, dis istemci kilavuzu ve oyun odakli tam plan belgeleri `elitx_core_fb/docs` altinda eklendi.
 
+## Ek Plan Guncellemesi (Append-Only) - 2026-03-28 / tur-8
+- [Tamamlandi] Cekirdek etrafinda yeni oyun kabugu `elitexf` olusturuldu.
+- [Tamamlandi] Moduler oyun katmani eklendi: turler, cekirdek adapter, arayuz ve ana dongu.
+- [Tamamlandi] Build/run scriptleri eklendi, Unicode yol sorunu stage-derleme ile cozuldu.
+- [Tamamlandi] Derleme dogrulamasi `elitexf/build.ps1` ile basarili.
+
